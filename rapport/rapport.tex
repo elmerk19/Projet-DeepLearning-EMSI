@@ -6,6 +6,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
 \usepackage{graphicx}
+\graphicspath{{figures/}}
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{longtable}
@@ -43,35 +44,35 @@
 % ===================== DOCUMENT =====================
 \begin{document}
 
-% --------------------- PAGE DE GARDE ---------------------
+% --- PAGE DE GARDE PROFESSIONNELLE (COMMENCE DIRECTEMENT ICI) ---
 \begin{titlepage}
-\centering
-\vspace*{1cm}
 
-{\Large\bfseries EMSI Casablanca}\\[0.3cm]
-{\large École Marocaine des Sciences de l'Ingénieur}\\[0.2cm]
-{\large Filière Informatique}\\[0.2cm]
-{\large Module : Deep Learning --- Année universitaire 2025--2026}
-
-\vspace{2.5cm}
-\rule{0.8\textwidth}{0.6pt}\\[0.6cm]
-{\huge\bfseries PROJET DE FIN DE MODULE}\\[1cm]
-{\Large\bfseries Conception, implémentation, comparaison et analyse critique de modèles de deep learning pour données tabulaires, images et séquences}\\[0.8cm]
-\rule{0.8\textwidth}{0.6pt}
+\begin{flushright}
+\includegraphics[width=15cm]{logo.png}
+\end{flushright}
 
 \vspace{1cm}
-{\large\itshape Travail individuel --- Examen final intégrateur}
 
-\vspace{3cm}
+\begin{center}
+{\Large \textbf{Ecole Marocaine des Sciences de l'Ingénieur}}\\[1.2cm]
 
-\begin{flushleft}
-\large
-\textbf{Nom de l'étudiant(e)~:} \makebox[8cm]{\hrulefill}\\[0.8cm]
-\textbf{Encadrant(e)~:} \makebox[8cm]{\hrulefill}\\[0.8cm]
-\textbf{Date~:} Juin 2026
-\end{flushleft}
+\rule{\linewidth}{0.5mm}\\[0.4cm]
+{\Huge \bfseries Conception, implémentation, comparaison et analyse critique de modèles de
+deep learning pour données tabulaires, images et séquences}\\[0.5cm]
+\rule{\linewidth}{0.3mm}\\[2cm]
 
+{\large Projet académique}\\
+{\large Module : Deep Learning}
+\end{center}
 \vfill
+\noindent
+\textbf{Réalisé par :}\\KIMATH Elmer\\
+
+\textbf{Encadré par :} Mme.HIDILA Zineb\\
+
+\textbf{Filiere : 4IADA/2025--2026}
+
+
 \end{titlepage}
 
 % --------------------- SOMMAIRE ---------------------
@@ -173,7 +174,7 @@ Xavier / Glorot            & \textbf{0,9882 (meilleure)} \\
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/figure1.png}
+\includegraphics[width=0.7\textwidth]{figure1.png}
 \caption{Accuracy de validation selon la stratégie d'initialisation des poids.}
 \end{figure}
 
@@ -204,13 +205,13 @@ F1-score                & 0,9720 \\
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.6\textwidth]{figures/figure2.png}
+\includegraphics[width=0.6\textwidth]{figure2.png}
 \caption{Matrice de confusion du MLP sur le jeu de test (86 observations).}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/figure3.png}
+\includegraphics[width=0.7\textwidth]{figure3.png}
 \caption{Courbes de loss d'entraînement et de validation du modèle final.}
 \end{figure}
 
@@ -294,7 +295,7 @@ Ajout d'une convolution 1$\times$1                  & 0,8407 & 0,9259 \\
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/figure4.png}
+\includegraphics[width=0.7\textwidth]{figure4.png}
 \caption{Accuracy de test selon la configuration architecturale du CNN.}
 \end{figure}
 
@@ -308,7 +309,7 @@ Le remplacement du max-pooling par l'average-pooling entraîne une légère bais
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.85\textwidth]{figures/figure5.png}
+\includegraphics[width=0.85\textwidth]{figure5.png}
 \caption{Cartes de caractéristiques produites par la première couche convolutive (8 des 16 filtres) sur une image de test.}
 \end{figure}
 
@@ -382,7 +383,7 @@ GRU         & 0,6376 & 1,89 & 26~770 \\
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/figure6.png}
+\includegraphics[width=0.7\textwidth]{figure6.png}
 \caption{Courbes de loss d'entraînement comparant RNN, LSTM et GRU sur la tâche de modélisation de langage.}
 \end{figure}
 
@@ -396,7 +397,7 @@ Pour illustrer ce mécanisme, une tâche synthétique de copie a été construit
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/figure7.png}
+\includegraphics[width=0.7\textwidth]{figure7.png}
 \caption{Norme du gradient au cours de l'entraînement, avec et sans gradient clipping (échelle logarithmique).}
 \end{figure}
 
@@ -414,7 +415,7 @@ Le modèle a été entraîné 300 époques (Adam, taux d'apprentissage 0,01, gra
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/figure8.png}
+\includegraphics[width=0.7\textwidth]{figure8.png}
 \caption{Courbe de loss d'entraînement du système Seq2Seq (teacher forcing).}
 \end{figure}
 
